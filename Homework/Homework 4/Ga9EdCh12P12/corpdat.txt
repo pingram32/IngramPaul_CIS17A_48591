@@ -1,0 +1,40 @@
+Corp Name: North
+Quarter 1:$ 50.00
+Quarter 2:$ 100000.00
+Quarter 3:$ 100.00
+Quarter 4:$ 100.00
+Total Annual sales:$100250.00
+Average Quarterly Sales:$25062.50
+
+Corp Name: East
+Quarter 1:$ 100.00
+Quarter 2:$ 100.00
+Quarter 3:$ 100.00
+Quarter 4:$ 100.00
+Total Annual sales:$400.00
+Average Quarterly Sales:$100.00
+
+Corp Name: West
+Quarter 1:$ 100.00
+Quarter 2:$ 100.00
+Quarter 3:$ 100.00
+Quarter 4:$ 100.00
+Total Annual sales:$400.00
+Average Quarterly Sales:$100.00
+
+Corp Name: East
+Quarter 1:$ 100.00
+Quarter 2:$ 100.00
+Quarter 3:$ 100.00
+Quarter 4:$ 100.00
+Total Annual sales:$400.00
+Average Quarterly Sales:$100.00
+
+Corporation Sales Data...
+Quarter 1:$ 350.00
+Quarter 2:$ 100300.00
+Quarter 3:$ 400.00
+Quarter 4:$ 400.00
+Total Annual Sales:$ 101450.00
+Lowest  Quarter Sales:$ 350.00
+Highest Quarter Sales:$ 100300.00

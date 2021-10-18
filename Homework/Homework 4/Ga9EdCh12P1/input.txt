@@ -1,0 +1,8 @@
+This is a program reading the header from a file.
+The program will display "Read Entire File" once the entirety of the file is read.
+Join the dark side.
+You won't regret it.
+Unlimited power.
+Rasengan. 
+Chidori.
+Kakashi Sensei.
