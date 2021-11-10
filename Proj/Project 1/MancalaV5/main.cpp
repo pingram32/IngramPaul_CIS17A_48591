@@ -1,7 +1,7 @@
 /* 
  * File:   main.cpp
  * Author: Paul Ingram 
- * Created on November 8, 2021, 6:05 PM
+ * Created on November 10, 2021, 11:08 AM
  * Purpose:  Mancala
  */
 
@@ -13,18 +13,19 @@
 using namespace std;
 
 //User Libraries
+const int SIZE=81;
+enum Turn {PLRONE,PLRTWO};
+
 struct Player{
-    char name1[81]="Player 1",
-         name2[81]="Player 2";
-    
     int score;
+    char name[SIZE]="Player ";
 };
 struct Board{
     const int SIZE=14;
     int cell[14]{4,4,4,4,4,4,0,4,4,4,4,4,4,0};
     Player *player=new Player[2];
 };
-enum Turn {PLRONE,PLRTWO};
+
 //Global Constants Only
 //Well known Science, Mathematical and Laboratory Constants and Conversion
 
@@ -41,6 +42,7 @@ int main(int argc, char** argv) {
     //Declare all variables for this function
     string table="board.dat",
            score="score.txt";
+    
     int curplr=PLRONE+1,
         cell,
         choice,
@@ -66,11 +68,11 @@ int main(int argc, char** argv) {
             showboard(game,table);
             
             cout<<endl;
-            while(board->player->name1[count]!='\0'){
-                cout<<board->player->name1[count];
+            while(board->player[PLRONE].name[count]!='\0'){
+                cout<<board->player[PLRONE].name[count];
                 count++;
             }
-            cout<<", select the cell you wish to play "
+            cout<<curplr<<", select the cell you wish to play "
                     <<"(1-6 Left to Right)"<<endl;
             cin>>choice;
             plrone(choice,board);
@@ -78,11 +80,11 @@ int main(int argc, char** argv) {
             board=rtrnscore(PLRONE,board);
             
             count=0;
-            while(board->player->name1[count]!='\0'){
-                scrbord<<board->player->name1[count];
+            while(board->player[PLRONE].name[count]!='\0'){
+                scrbord<<board->player[PLRONE].name[count];
                 count++;
             }
-            scrbord<<setw(8)<<board->player[PLRONE].score<<endl;
+            scrbord<<curplr<<setw(12)<<board->player[PLRONE].score<<endl;
             
             totone=board->cell[5]+board->cell[4]+board->cell[3]+board->cell[2]+
                     board->cell[1]+board->cell[0];
@@ -94,11 +96,11 @@ int main(int argc, char** argv) {
             showboard(game,table);
             
             cout<<endl;
-            while(board->player->name2[count]!='\0'){
-                cout<<board->player->name2[count];
+            while(board->player[PLRTWO].name[count]!='\0'){
+                cout<<board->player[PLRTWO].name[count];
                 count++;
             }
-            cout<<", select the cell you wish to play "
+            cout<<curplr<<", select the cell you wish to play "
                     <<"(1-6 Left to Right)"<<endl;
             cin>>choice;
             plrtwo(choice,board);
@@ -107,11 +109,11 @@ int main(int argc, char** argv) {
             
             count=0;
             scrbord<<setw(12);
-            while(board->player->name2[count]!='\0'){
-                scrbord<<board->player->name2[count];
+            while(board->player[PLRTWO].name[count]!='\0'){
+                scrbord<<board->player[PLRTWO].name[count];
                 count++;
             }
-            scrbord<<setw(8)<<board->player[PLRTWO].score<<endl<<endl;;
+            scrbord<<curplr<<setw(12)<<board->player[PLRTWO].score<<endl<<endl;;
             
             tottwo=board->cell[7]+board->cell[8]+board->cell[9]+board->cell[10]+
                     board->cell[11]+board->cell[12];
