@@ -45,7 +45,7 @@ int main(int argc, char** argv) {
         cell,
         choice,
         round=1,
-        totone=1,tottwo=1;
+        totone,tottwo;
     Board *board=new Board;
     fstream game,
             scrbord;
@@ -83,6 +83,9 @@ int main(int argc, char** argv) {
                 count++;
             }
             scrbord<<setw(8)<<board->player[PLRONE].score<<endl;
+            
+            totone=board->cell[5]+board->cell[4]+board->cell[3]+board->cell[2]+
+                    board->cell[1]+board->cell[0];
         }
         else{
             int count=0;
@@ -109,6 +112,9 @@ int main(int argc, char** argv) {
                 count++;
             }
             scrbord<<setw(8)<<board->player[PLRTWO].score<<endl<<endl;;
+            
+            tottwo=board->cell[7]+board->cell[8]+board->cell[9]+board->cell[10]+
+                    board->cell[11]+board->cell[12];
         }
         if(curplr==PLRONE+1){
             curplr=PLRTWO+1;
@@ -119,12 +125,14 @@ int main(int argc, char** argv) {
         }
         
     }while(totone!=0 || tottwo!=0);
-    scrbord.close();
-    delete []board->player;
-    delete []board;
+    
+    
     //Display the Inputs/Outputs
    
     //Clean up the code, close files, deallocate memory, etc....
+    scrbord.close();
+    delete []board->player;
+    delete []board;
     //Exit stage right
     return 0;
 }
