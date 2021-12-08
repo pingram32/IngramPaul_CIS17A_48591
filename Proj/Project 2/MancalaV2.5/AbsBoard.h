@@ -10,8 +10,10 @@
 #include <iostream>
 #include <new>
 #include <cstdlib>
+#include "Player.h"
 using namespace std;
 
+const int SIZE=14;
 template <class T>
 class AbsBoard{
     protected:
@@ -29,7 +31,17 @@ public:
                 memError();
             }
     }
-        
+    
+    AbsBoard(){
+            aSize=SIZE;
+            try{
+                aptr=new T[SIZE];
+            }
+            catch (bad_alloc){
+                memError();
+            }
+    }    
+    
     ~AbsBoard(){
         if(aSize>0){
             delete []aptr;

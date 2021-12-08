@@ -23,6 +23,28 @@ class GameBoard : public AbsBoard<int> {
             }
         }
         
+        GameBoard():AbsBoard<int>(){
+            for(int i=0;i<aSize;i++){
+                if(i==0 || i==7){
+                    *(aptr+i)=0;
+                }
+                else{
+                    *(aptr+i)=4;
+                }
+            }
+        }
+        
+        void setSize(int s){
+            for(int i=0;i<aSize;i++){
+                if(i==0 || i==7){
+                    *(aptr+i)=0;
+                }
+                else{
+                    *(aptr+i)=4;
+                }
+            }
+        }
+        
         void playCell(int, int);
         
         void showBoard();
@@ -108,7 +130,7 @@ void GameBoard::playCell(int c, int p){
         if(c==6){
             int count=aptr[1],
                     index=2;
-            aptr[2]=0;
+            aptr[1]=0;
             
             for(int i=1;i<=count;i++){
                 aptr[index]++;
