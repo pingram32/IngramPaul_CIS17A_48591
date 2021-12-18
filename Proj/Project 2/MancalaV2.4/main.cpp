@@ -2,7 +2,7 @@
  * File:   main.cpp
  * Author: Paul Ingram 
  * Created on December 3, 2021, 12:50 PM
- * Purpose:  Mancala
+ * Purpose:  Mancala 2
  */
 
 //System Libraries

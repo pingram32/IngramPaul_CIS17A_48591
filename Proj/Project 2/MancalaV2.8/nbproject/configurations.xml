@@ -7,6 +7,7 @@
       <itemPath>AbsBoard.h</itemPath>
       <itemPath>GameBoard.h</itemPath>
       <itemPath>Player.h</itemPath>
+      <itemPath>SimBots.h</itemPath>
       <itemPath>Simulate.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -16,6 +17,9 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>GameBoard.cpp</itemPath>
+      <itemPath>SimBots.cpp</itemPath>
+      <itemPath>Simulate.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -42,9 +46,17 @@
       </compileType>
       <item path="AbsBoard.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="GameBoard.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="GameBoard.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Player.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SimBots.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SimBots.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Simulate.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Simulate.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -73,9 +85,17 @@
       </compileType>
       <item path="AbsBoard.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="GameBoard.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="GameBoard.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Player.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SimBots.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SimBots.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Simulate.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Simulate.h" ex="false" tool="3" flavor2="0">
       </item>
